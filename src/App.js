@@ -6,15 +6,12 @@ import RouteLayout from './pages/RouteLayout'
 function App() {
   return (
     <>
-      <Routes>
-        <Route >
-          <Route index element={<Home />}/>
-          <Route/>
-          <Route />
-          <Route />
+        <Routes>
+        <Route path="/">
+          <Route index element={<Home />} />
+   
         </Route>
       </Routes>
-    
     </>
   );
 }
