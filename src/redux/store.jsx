@@ -4,6 +4,6 @@ import charactersSlice  from "./charactersSlice";
 
 export const store = configureStore({
     reducer: {
-        characters: charactersSlice,
+        character: charactersSlice,
     },
 });

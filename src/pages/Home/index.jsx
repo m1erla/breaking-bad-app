@@ -1,18 +1,29 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch} from 'react-redux'
 import { fetchCharacters } from '../../redux/charactersSlice';
 
 function Home() {
-    const data = useSelector((state) => state.characters);
+    const chars = useSelector((state) => state.character.items);
     const dispatch = useDispatch();
 
     useEffect(() => {
      dispatch(fetchCharacters());
     }, [dispatch])
 
-    console.log("data : ",  data);
   return (
-    <div>Home</div>
+   <div>
+    <h1>characters</h1>
+     {Array.from(chars).map((character) => (
+      <div key={character.id}>
+
+      </div>
+     ))
+   
+
+     }
+   </div>
+     
+    
   )
 }
 
