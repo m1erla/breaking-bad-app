@@ -37,7 +37,7 @@ export const charactersSlice = createSlice({
         builder.addCase(fetchCharacters.fulfilled, (state, action) => {
             state.items = [...state.items, ...action.payload];
             state.page += 1;
-            state.statuis = "success";
+            state.status = "success";
             if(action.payload.length < 12){
                 state.hasNextPage = false;
             }
