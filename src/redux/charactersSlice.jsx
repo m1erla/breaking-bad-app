@@ -48,10 +48,10 @@ export const charactersSlice = createSlice({
         })
 
         // get item
-        builder.addCase(fetchCharDetails.pending, (state, action => {
+        builder.addCase(fetchCharDetails.pending, (state, action) => {
             state.status = "loading";
 
-        }))
+        })
         builder.addCase(fetchCharDetails.fulfilled, (state, action) => {
             state.item = action.payload[0];
             state.status = "success";
