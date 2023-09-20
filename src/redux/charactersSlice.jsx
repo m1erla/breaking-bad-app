@@ -31,7 +31,7 @@ export const charactersSlice = createSlice({
     },
     extraReducers: (builder) => {
         // get Characters
-        builder.addCase(fetchCharacters.pending, (state) => {
+        builder.addCase(fetchCharacters.pending, (state, action) => {
             state.status = "loading";
         });
         builder.addCase(fetchCharacters.fulfilled, (state, action) => {

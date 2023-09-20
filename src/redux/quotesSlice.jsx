@@ -18,7 +18,7 @@ export const quotesSlice = createSlice({
     },
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(fetchQuotes.pending, (state, action) => {
+        builder.addCase(fetchQuotes.pending, (state) => {
             state.status = "loading";
         });
         builder.addCase(fetchQuotes.fulfilled, (state, action) => {
